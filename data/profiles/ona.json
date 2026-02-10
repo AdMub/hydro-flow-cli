@@ -1,0 +1,8 @@
+{
+    "basin_name": "Ona",
+    "channel_width": 5.0,
+    "slope": 0.456,
+    "manning_n": 0.33,
+    "side_slope": 3.0,
+    "threshold_high": 4.5
+}

@@ -186,11 +186,11 @@ def stress_test(
     iterations: int = typer.Option(1000, help="Number of Monte Carlo simulations")
 ):
     """
-    MONTE CARLO SIMULATION: Predicts failure probability under 1,000 scenarios.
+    MONTE CARLO SIMULATION: Predicts failure probability & Plots Histogram.
     """
     console.print(f"[bold magenta]🎲 Running {iterations} Monte Carlo Simulations...[/bold magenta]")
     
-    with console.status("[bold magenta]Crunching Statistics...[/bold magenta]"):
+    with console.status("[bold magenta]Crunching Statistics & Generating Graph...[/bold magenta]"):
         result = run_flood_risk_simulation("data/profiles/ona.json", depth, iterations)
         time.sleep(1)
 
@@ -201,7 +201,8 @@ def stress_test(
     console.print(Panel(
         f"📊 [bold]Failure Probability:[/bold] [{risk_color}]{result['probability']:.1f}%[/{risk_color}]\n"
         f"🌊 [bold]95th Percentile Flow:[/bold] {result['p95_discharge']:.2f} m³/s\n"
-        f"📈 [bold]Mean Flow:[/bold] {result['mean_discharge']:.2f} m³/s",
+        f"📈 [bold]Mean Flow:[/bold] {result['mean_discharge']:.2f} m³/s\n"
+        f"🖼️ [bold]Risk Graph Saved:[/bold] {result['graph']}",
         title="Hydraulic Reliability Analysis",
         border_style=risk_color
     ))

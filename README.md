@@ -44,57 +44,79 @@ hydro design --target-q 500 --max-depth 5.0
 **The Solution:** Hydro-Flow runs **1,000 parallel simulations** with randomized variables (Roughness $n \pm 10\%$, Flash Flood Surge $y \pm 20\%$) to generate a **Probability Density Function** of failure.
 
 
-Predicts infrastructure reliability by running **1,000 parallel simulations** with randomized environmental variables (roughness, rainfall surge). It generates a **Probability Density Histogram** to visualize risk.
 
 ```bash
 hydro stress-test --depth 3.8 --iterations 1000
-# 📊 Failure Probability: 24.5% (Risk Histogram Saved)
+# Output:
+# 📊 Failure Probability: 24.5%
+# 🖼️ Risk Graph Saved: local_workspace/risk_distribution.png
 ```
 
-## 🎨 Visual Digital Twin
-Instantly generates professional hydraulic cross-sections (`.png`) showing water levels against channel banks using procedural plotting.
+### 🎨 Visual Digital Twin
+**The Solution:** Instantly generates professional hydraulic cross-sections (`.png`) showing water levels against channel banks using procedural **Matplotlib** plotting.
+
 
 ```bash
 hydro visualize --depth 4.5
+# Output: Image Saved: local_workspace/cross_section.png
 ```
 
-## 🌉 Bridge Scour Analysis
-Calculates the **Backwater Effect** (Afflux) caused by bridge constrictions using **Bernoulli's Energy Principle.**
+### 🌉 Bridge Scour Analysis
+**The Solution:** Calculates the **Backwater Effect** (Afflux) caused by bridge constrictions using **Bernoulli's Energy Principle,** predicting upstream flooding caused by infrastructure.
+
+---
 
 ```bash
 hydro bridge-check --contraction 0.7
 # Rise in Water Level: +1.11 m
 ```
 
-## 🤖 The AI Co-Engineer Experience
-Built for the **GitHub Copilot CLI Challenge,** this project pushes the boundaries of BASH-based engineering.
+### 🤖 The AI Co-Engineer Experience
+Built for the **GitHub Copilot CLI Challenge,** this project pushes the boundaries of what's possible in a BASH environment. I used Copilot as a **Domain Expert** and **DevOps Engineer:**
 
-1. **Solving Inverse Problems:** I used Copilot to implement the **Scipy Optimization** logic (`minimize_scalar`) to automatically minimize excavation costs.
+1. **Solving Inverse Problems:** I asked Copilot to help me map engineering constraints (Max Depth) into a Python cost function that `scipy.optimize.minimize_scalar` could understand.
     
-2. **Visual Engineering:** Copilot helped write the `Matplotlib` engine to procedurally plot river banks and water surface fills using coordinate geometry.
+2. **Containerization Hurdles:** When Dockerizing the application, I hit a critical `ModuleNotFoundError` due to Python path resolution. Copilot CLI helped me debug the `PYTHONPATH` environment variables and structure the `__init__.py` files to make the tool truly portable.
 
-3. **Dockerization:** When I hit a `PYTHONPATH` resolution error during containerization, Copilot CLI helped me debug the environment variables and `__init__.py` structure to ensure true portability.
+3. **Visual Engineering:** Copilot generated the complex coordinate geometry logic required to plot the trapezoidal banks and water surface fills in Matplotlib.
 
-## 🛠️ Installation & Usage
-1. **Clone & Install**
+---
+
+### 🛠️ Installation 
+#### **Option A: Docker (Recommended for Production)**
+Hydro-Flow is fully containerized. You don't need to install heavy libraries manually.
 ```bash
-git clone [https://github.com/AdMub/hydro-flow-cli.git](https://github.com/AdMub/hydro-flow-cli.git)
-cd hydro-flow-cli
-pip install -e .
-```
-
-2. **Run the Test Suite**
-```bash
-hydro test-suite
-```
-
-3. **Docker Support (Production Ready)**
-```bash
+# Build the image
 docker build -t hydro-flow .
+
+# Run the Auto-Designer inside Docker
 docker run --rm hydro-flow design --target-q 300 --max-depth 4.0
 ```
+#### **Option B: Local Installation**
+```bash
+# Clone the repository
+git clone [https://github.com/AdMub/hydro-flow-cli.git](https://github.com/AdMub/hydro-flow-cli.git)
+cd hydro-flow-cli
 
-## 📂 Project Structure
+# Install dependencies
+pip install -e .
+```
+---
+
+
+### ⚡ Usage Cheat Sheet
+```
+Command	Description
+`hydro wizard`	Create a new Basin Profile interactively.
+`hydro visualize`	Generate a Cross-Section Image (PNG).
+`hydro design`	Calculate optimal channel dimensions (Inverse Solver).
+`hydro stress-test`	Run Monte Carlo Risk Analysis.
+`hydro bridge-check`	Calculate Afflux (Backwater Effect).
+`hydro scan-dem`	Sample elevation from Satellite Data (TIFF).
+`hydro test-suite`	Run automated Unit Tests.
+```
+
+### 📂 Project Structure
 ```
 hydro-flow-cli/
 ├── hydro/
@@ -107,6 +129,7 @@ hydro-flow-cli/
 └── requirements.txt   # Dependencies
 ```
 
+---
 
 Built with Python, Typer, Rich, Scipy, Matplotlib, and GitHub Copilot.
 

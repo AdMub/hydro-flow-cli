@@ -139,3 +139,16 @@ hydro-flow-cli/
 Built with Python, Typer, Rich, Scipy, Matplotlib, and GitHub Copilot.
 
 
+### **👨‍💻 Author**
+**Mubarak Adisa**
+- 🎓 Civil Engineering + Computer Science (Data Science & AI Focus)
+- 🔗 GitHub: [AdMub](https://github.com/AdMub)
+- 💼 LinkedIn: [Mubarak Adisa](https://www.linkedin.com/in/mubarak-adisa-334a441b6/)
+
+### **📄 License**
+Distributed under the MIT License. See `LICENSE` for more information.
+
+### **🌟 Acknowledgements**
+- Built for the **GitHub Copilot CLI Challenge 2026**.
+- Powered by **GitHub Copilot**, **Typer**, **Rich**, **Scipy**, and **Matplotlib**.
+- Special thanks to the open-source Python hydrology community.

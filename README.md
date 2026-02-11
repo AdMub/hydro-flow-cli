@@ -3,24 +3,47 @@
 > **The Hydrologist's Terminal Assistant**
 > *Advanced open-channel flow modeling, Monte Carlo risk analysis, and hydraulic auto-design.*
 
-![Hydro-Flow Demo](https://placehold.co/800x400?text=Hydro-Flow+Visual+Output)
-*(Replace this with your actual 'risk_distribution.png' or 'cross_section.png' after you upload them)*
+![Hydro-Flow Hero Image](PLACEHOLDER_LINK_TO_YOUR_COVER_IMAGE_OR_TERMINAL_SCREENSHOT.png)
+*(A Digital Twin of the Ona River Basin generated directly in the terminal)*
 
 ## 🚀 Overview
-**Hydro-Flow CLI** is an AI-augmented command-line tool designed to bring HEC-RAS caliber hydrology to the terminal. While most CLI tools are simple calculators, Hydro-Flow helps engineers **design** channels, **visualize** flood risks, and **stress-test** infrastructure using statistical simulations.
 
-Battle-tested on the **Ona River Basin** (Nigeria), it empowers engineers to perform complex geospatial and hydraulic analysis without leaving the command line.
+**Hydro-Flow CLI** is an AI-augmented command-line tool designed to bring **HEC-RAS caliber hydrology** to the terminal.
 
-## ✨ Key Features
+Hydrologic modeling usually requires expensive, heavy GUI software. **Hydro-Flow** breaks this barrier by providing a "Headless" engineering engine that helps engineers **design** channels, **visualize** flood risks, and **stress-test** infrastructure using statistical simulations—all from a simple CLI.
 
-### 🤖 Auto-Design (Inverse Solver)
-Solves the "Inverse Hydraulic Problem" using **Scipy Optimization**. Instead of guessing dimensions, Hydro-Flow calculates the *exact* minimum channel width required to handle a target flood using the **Newton-Raphson method**.
+Battle-tested on the **Ona River Basin** (Nigeria), it empowers engineers to perform complex geospatial and hydraulic analysis using **Scipy**, **NumPy**, and **Docker**.
+
+---
+
+## 📺 Demo Video
+
+[![Watch the Hydro-Flow Demo](https://img.youtube.com/vi/PLACEHOLDER_VIDEO_ID/0.jpg)](PLACEHOLDER_LINK_TO_YOUR_YOUTUBE_VIDEO)
+
+> *Watch how Hydro-Flow solves complex inverse hydraulic problems in under 2 minutes.*
+
+---
+
+## ✨ Key Features & Engineering Logic
+
+### 1. 🤖 Auto-Design (The Inverse Solver)
+**The Problem:** Usually, engineers guess channel dimensions until they find one that works (Trial & Error).
+**The Solution:** Hydro-Flow solves the **Inverse Hydraulic Problem** using **Scipy Optimization** (Newton-Raphson Method). It calculates the *exact* minimum channel width required to handle a target flood while minimizing excavation costs.
+
 ```bash
 hydro design --target-q 500 --max-depth 5.0
-# ✅ OPTIMAL DESIGN FOUND: Recommended Width: 8.79 m
+
+# Output:
+# ✅ OPTIMAL DESIGN FOUND
+# Recommended Width: 8.79 m
+# Excavation Volume: 118.97 m²/unit
 ```
 
-## 🎲 Monte Carlo Stress Testing
+## 🎲 Monte Carlo Stress Testing (Stochastic Analysis)
+**The Problem:** Standard calculators assume perfect conditions. They fail to account for real-world variability.
+**The Solution:** Hydro-Flow runs **1,000 parallel simulations** with randomized variables (Roughness $n \pm 10\%$, Flash Flood Surge $y \pm 20\%$) to generate a **Probability Density Function** of failure.
+
+
 Predicts infrastructure reliability by running **1,000 parallel simulations** with randomized environmental variables (roughness, rainfall surge). It generates a **Probability Density Histogram** to visualize risk.
 
 ```bash

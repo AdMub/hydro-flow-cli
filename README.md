@@ -42,6 +42,7 @@ hydro design --target-q 500 --max-depth 5.0
 
 ## 🎲 Monte Carlo Stress Testing (Stochastic Analysis)
 **The Problem:** Standard calculators assume perfect conditions. They fail to account for real-world variability.
+
 **The Solution:** Hydro-Flow runs **1,000 parallel simulations** with randomized variables (Roughness $n \pm 10\%$, Flash Flood Surge $y \pm 20\%$) to generate a **Probability Density Function** of failure.
 
 

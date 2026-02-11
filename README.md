@@ -3,7 +3,7 @@
 > **The Hydrologist's Terminal Assistant**
 > *Advanced open-channel flow modeling, Monte Carlo risk analysis, and hydraulic auto-design.*
 
-![Hydro-Flow Hero Image](PLACEHOLDER_LINK_TO_YOUR_COVER_IMAGE_OR_TERMINAL_SCREENSHOT.png)
+![Hydro-Flow Hero Image](/Screenshot_terminal/cover_image.png)
 *(A Digital Twin of the Ona River Basin generated directly in the terminal)*
 
 ## 🚀 Overview

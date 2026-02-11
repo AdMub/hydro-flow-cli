@@ -105,16 +105,16 @@ pip install -e .
 
 
 ### ⚡ Usage Cheat Sheet
-```
-Command	Description
-`hydro wizard`	Create a new Basin Profile interactively.
-`hydro visualize`	Generate a Cross-Section Image (PNG).
-`hydro design`	Calculate optimal channel dimensions (Inverse Solver).
-`hydro stress-test`	Run Monte Carlo Risk Analysis.
-`hydro bridge-check`	Calculate Afflux (Backwater Effect).
-`hydro scan-dem`	Sample elevation from Satellite Data (TIFF).
-`hydro test-suite`	Run automated Unit Tests.
-```
+| Command | Description |
+| :--- | :--- |
+| `hydro wizard` | Create a new Basin Profile interactively. |
+| `hydro visualize` | Generate a Cross-Section Image (PNG). |
+| `hydro design` | Calculate optimal channel dimensions (Inverse Solver). |
+| `hydro stress-test` | Run Monte Carlo Risk Analysis. |
+| `hydro bridge-check` | Calculate Afflux (Backwater Effect). |
+| `hydro scan-dem` | Sample elevation from Satellite Data (TIFF). |
+| `hydro test-suite` | Run automated Unit Tests. |
+
 
 ### 📂 Project Structure
 ```

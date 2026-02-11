@@ -28,6 +28,7 @@ Battle-tested on the **Ona River Basin** (Nigeria), it empowers engineers to per
 
 ### 1. 🤖 Auto-Design (The Inverse Solver)
 **The Problem:** Usually, engineers guess channel dimensions until they find one that works (Trial & Error).
+
 **The Solution:** Hydro-Flow solves the **Inverse Hydraulic Problem** using **Scipy Optimization** (Newton-Raphson Method). It calculates the *exact* minimum channel width required to handle a target flood while minimizing excavation costs.
 
 ```bash

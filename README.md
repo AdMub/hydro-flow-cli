@@ -4,6 +4,8 @@
 > *Advanced open-channel flow modeling, Monte Carlo risk analysis, and hydraulic auto-design.*
 
 ![Hydro-Flow Hero Image](/Screenshot_terminal/cover_image.png)
+![Cross Section Visualization](local_workspace/cross_section.png)
+![Risk Distribution Graph](local_workspace/risk_distribution.png)
 *(A Digital Twin of the Ona River Basin generated directly in the terminal)*
 
 ## 🚀 Overview

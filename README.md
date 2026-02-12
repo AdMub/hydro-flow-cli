@@ -21,9 +21,9 @@ Battle-tested on the **Ona River Basin** (Nigeria), it empowers engineers to per
 
 ## 📺 Demo Video
 
-[![Watch the Hydro-Flow Demo](https://img.youtube.com/vi/PLACEHOLDER_VIDEO_ID/0.jpg)](PLACEHOLDER_LINK_TO_YOUR_YOUTUBE_VIDEO)
+[![Watch the Hydro-Flow Demo](https://img.youtube.com/vi/uLUQii4jSI0/0.jpg)](https://youtu.be/uLUQii4jSI0)
 
-> *Watch how Hydro-Flow solves complex inverse hydraulic problems in under 2 minutes.*
+> *Watch how Hydro-Flow solves complex inverse hydraulic problems with GitHub Copilot CLI.*
 
 ---
 
